@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans-Regular.woff2") format("woff2"),
+    url("../fonts/PTSans-Regular.woff") format("woff"),
+    url("../fonts/PTSans-Bold.woff2") format("woff2"),
+    url("../fonts/PTSans-Bold.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "PT Sans","Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+@import "block/visually-hidden";
+
+// @media (min-width: 1200px) {
+  .container {
+    width: 1280px;
+    padding: 0 40px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+
+    &__shadow {
+      box-shadow: 0 0 15px 5px rgba(0, 1, 1, 0.2);
+    }
+  }
+
+@import "block/index/page-header-index";
+@import "block/index/main-nav-index";
+@import "block/index/main-title-index";
+@import "block/section-title";
+@import "block/index/intro-city-index";
+@import "block/index/city-features-index";
+@import "block/index/search-hotels-index";
+@import "block/index/page-footer-index";
+
+@import "block/form/title-form";
+@import "block/form/reviews";
+@import "block/form/form-reviews";
+
+
+.failure-popup {
+  display: flex;
+  width: 400px;
+  padding: 63px 64px 49px 64px;
+  box-shadow: 0px 0px 15px 7px rgba(0, 1, 1, 0.15);
+
+
+  &__title {
+    margin: 0;
+    width: 220px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  &__failure-description {
+    margin-bottom: 32px;
+    width: 275px;
+    text-align: left;
+  }
+
+  &__button {
+    padding: 21px 123px 22px 122px;
+    font-size: 21px;
+    color: #ffffff;
+    background-color: #81b3d2;
+    border: none;
+  }
+}
+
+.popup-modal {
+  display: none;
+  position: fixed;
+  bottom: 231px;
+  left: 50%;
+  margin-left: -200px;
+}
+
+.success-popup {
+  width: 640px;
+}
+//}

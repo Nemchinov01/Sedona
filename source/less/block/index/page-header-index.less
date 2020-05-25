@@ -1,0 +1,23 @@
+.page-header {
+  position: relative;
+
+  &__logo {
+    display: flex;
+    width: 188px;
+    height: 96px;
+    position: absolute;
+    top: 0;
+    left: 507px;
+  }
+
+  &__logo::before {
+    content: url(../img/logo-sedona-desktop.svg);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__logo-image {
+    display: none;
+  }
+}

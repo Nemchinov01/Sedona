@@ -1,0 +1,311 @@
+.form-reviews {
+  padding: 0 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+
+  &__fieldset {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: none;
+  }
+
+  &__field-title {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+  }
+
+  &__fieldset-wrapper {
+    margin-bottom: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__fieldset-wrapper:before {
+    content: "";
+    width: 1px;
+    height: 292px;
+    top: 9px;
+    left: 480px;
+    background-color: #dbdbdb;
+    position: absolute;
+  }
+
+  &__fieldset-wrapper {
+    .form-reviews__fieldset {
+      display: flex;
+      flex-direction: column;
+      width: 480px;
+    }
+  }
+
+  &__field-title--feel,
+  &__field-title--name {
+    padding-left: 79px;
+    padding-top: 5px;
+    margin-bottom: 56px;
+  }
+
+  &__label-radio {
+    padding-left: 80px;
+    position: relative;
+  }
+
+  &__toggle-label {
+    display: block;
+    width: 200px;
+    padding-top: 19px;
+    padding-bottom: 38px;
+    font-size: 18px;
+    text-transform: none;
+  }
+
+  &__toggle-label::before {
+    content: "";
+    width: 56px;
+    height: 56px;
+    left: 4px;
+    top: 0;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #f2f2f2;
+  }
+
+  &__toggle-label::after {
+    display: none;
+    content: "";
+    width: 22px;
+    height: 22px;
+    left: 21px;
+    top: 19px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #333333;
+  }
+
+  &__field-radio:checked+&__toggle-label::after {
+    display: block;
+  }
+
+  &__field-radio:focus+&__toggle-label {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+
+  &__label-name {
+    padding-left: 80px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__field-text {
+    width: 100%;
+    padding: 16px 0 16px 21px;
+    margin-left: 14px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+    text-transform: none;
+    color: #000000;
+    border: none;
+    background-color: #f2f2f2;
+  }
+
+  &__label-name:first-child {
+    .form-reviews__field-text {
+      margin-left: 13px;
+    }
+  }
+
+  &__label-name:last-of-type {
+    .form-reviews__field-text {
+      margin-left: 17px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__label-name:first-of-type {
+    .form-reviews__field-text {
+      margin-left: 13px;
+    }
+  }
+
+  &__field-text::placeholder {
+    font-size: 18px;
+    color: #000000;
+  }
+
+  &__fieldset--contacts {
+    margin-bottom: 53px;
+  }
+
+  &__field-title--in-one-line,
+  &__field-title--in-two-line {
+    margin: 0;
+    padding: 0 340px;
+    text-align: center;
+    position: relative;
+  }
+
+  &__field-title--in-one-line::before,
+  &__field-title--in-one-line::after,
+  &__field-title--in-two-line::before,
+  &__field-title--in-two-line::after {
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: #dbdbdb;
+    position: absolute;
+  }
+
+  &__field-title--in-one-line::before {
+    left: 0;
+    top: 12px;
+  }
+
+  &__field-title--in-one-line::after {
+    right: 0;
+    top: 12px;
+  }
+
+  &__field-title--in-two-line::before {
+    left: 0;
+    top: 25px;
+  }
+
+  &__field-title--in-two-line::after {
+    right: 0;
+    top: 25px;
+  }
+
+  &__field-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__field-call,
+  &__field-email {
+    width: 315px;
+    padding: 19px 73px 19px 21px;
+    margin-left: 12px;
+    margin-top: 74px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #f2f2f2;
+    border: none;
+  }
+
+  &__field-email {
+    width: 316px;
+    margin-left: 14px;
+  }
+
+  &__label-checkbox {
+    width: 205px;
+    margin-top: 42px;
+    margin-right: 54px;
+    display: flex;
+  }
+
+  &__label-checkbox:nth-child(3) {
+    margin-right: 32px;
+  }
+
+  &__label-checkbox:nth-child(4) {
+    margin-right: 0;
+  }
+
+  &__checkbox-label {
+    padding-top: 16px;
+    padding-bottom: 18px;
+    padding-left: 80px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: none;
+    position: relative;
+  }
+
+  &__checkbox-label::before {
+    content: "";
+    width: 56px;
+    height: 56px;
+    left: 0;
+    top: 0;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    position: absolute;
+  }
+
+  &__checkbox-label::after {
+    display: none;
+    content: url(../img/icon-tick.svg);
+    width: 24px;
+    height: 16px;
+    left: 17px;
+    top: 20px;
+    position: absolute;
+  }
+
+  &__field-checkbox:checked+&__checkbox-label::after {
+    display: block;
+  }
+
+  &__field-checkbox:focus+&__checkbox-label::before {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+
+  &__fieldset--landmark {
+    margin-bottom: 67px;
+  }
+
+  &__field-title--emotion {
+    padding: 0 353px;
+  }
+
+  &__fieldset-textarea {
+    margin-top: 57px;
+    width: 960px;
+    height: 160px;
+    padding: 19px 25px 19px 21px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: none;
+    background-color: #f2f2f2;
+    border: none;
+    resize: none;
+  }
+
+  &__fieldset-textarea::placeholder {
+    color: #000000;
+  }
+
+  &__button-container {
+    width: 100%;
+    display: flex;
+    margin-top: 52px;
+  }
+
+  &__button {
+    margin-right: auto;
+    padding: 16px 150px 18px 148px;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    background-color: #81b3d2;
+  }
+
+  &__must-field {
+    margin-top: 21px;
+    font-weight: normal;
+  }
+}
