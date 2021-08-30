@@ -1,0 +1,80 @@
+.page-footer {
+  display: flex;
+
+  &__title {
+    margin: 0;
+    margin-top: 12px;
+    padding: 1px;
+  }
+
+  &__social {
+    width: 154px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__social-button {
+    display: block;
+    width: 46px;
+    height: 48px;
+    background-color: #81b3d2;
+    position: relative;
+  }
+
+  &__social-button:nth-child(2) {
+    width: 47px;
+  }
+
+  &__button-icon {
+    fill: #ffffff;
+    position: absolute;
+  }
+
+  &__social-button:hover {
+    background-color: #669ec0;
+  }
+
+  &__social-button:active {
+    background-color: #5496bd;
+  }
+
+  &__social-button:active &__button-icon {
+    opacity: 0.3;
+  }
+
+  &__button--twitter {
+    top: 16px;
+    left: 15px;
+  }
+
+  &__button--facebook {
+    top: 13px;
+    left: 19px;
+  }
+
+  &__button--youtube {
+    top: 17px;
+    left: 13px;
+  }
+
+  &__copyright-wrappper {
+    width: 131px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copyright-logo-link {
+    display: flex;
+    align-self: center;
+  }
+
+   &__copyright-logo-htmlacademy:hover {
+     fill: #81b3d2;
+   }
+
+   &__copyright-logo-htmlacademy:active {
+     fill: #000000;
+     opacity: 0.3;
+   }
+}

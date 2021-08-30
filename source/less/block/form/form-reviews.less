@@ -1,5 +1,4 @@
 .form-reviews {
-  padding: 0 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,40 +18,51 @@
   }
 
   &__fieldset-wrapper {
-    margin-bottom: 48px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     position: relative;
+
+    .form-reviews__fieldset {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
-  &__fieldset-wrapper:before {
+  &__fieldset-wrapper::before {
     content: "";
     width: 1px;
     height: 292px;
     top: 9px;
-    left: 480px;
     background-color: #dbdbdb;
     position: absolute;
   }
 
-  &__fieldset-wrapper {
-    .form-reviews__fieldset {
-      display: flex;
-      flex-direction: column;
-      width: 480px;
-    }
+  &__input:hover {
+    background-color: #e5e5e5;
+  }
+
+  &__input:focus {
+    background-color: #ffffff;
+    outline: 4px solid #e5e5e5;
+  }
+
+  &__label-phone,
+  &__label-email {
+    position: relative;
+  }
+
+  &__icon-email,
+  &__icon-phone {
+    position: absolute;
   }
 
   &__field-title--feel,
   &__field-title--name {
-    padding-left: 79px;
     padding-top: 5px;
-    margin-bottom: 56px;
   }
 
   &__label-radio {
-    padding-left: 80px;
     position: relative;
   }
 
@@ -69,7 +79,6 @@
     content: "";
     width: 56px;
     height: 56px;
-    left: 4px;
     top: 0;
     border-radius: 50%;
     position: absolute;
@@ -82,23 +91,33 @@
     width: 22px;
     height: 22px;
     left: 21px;
-    top: 19px;
+    top: 20px;
     border-radius: 50%;
     position: absolute;
     background-color: #333333;
   }
 
-  &__field-radio:checked+&__toggle-label::after {
+  &__field-radio:checked + &__toggle-label::after {
     display: block;
   }
 
-  &__field-radio:focus+&__toggle-label {
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
+  &__field-radio:hover + &__toggle-label::before {
+     background-color: #e5e5e5;
+  }
+
+  &__field-radio:active + &__toggle-label::before {
+    background-color: #d5d5d5;
+  }
+
+  &__field-radio:checked:active + &__toggle-label::after {
+    opacity: 0.3;
+  }
+
+  &__field-radio:focus + &__toggle-label::before {
+    outline: 1px auto #e5e5e5;
   }
 
   &__label-name {
-    padding-left: 80px;
     display: flex;
     align-items: baseline;
   }
@@ -141,14 +160,9 @@
     color: #000000;
   }
 
-  &__fieldset--contacts {
-    margin-bottom: 53px;
-  }
-
   &__field-title--in-one-line,
   &__field-title--in-two-line {
     margin: 0;
-    padding: 0 340px;
     text-align: center;
     position: relative;
   }
@@ -158,7 +172,6 @@
   &__field-title--in-two-line::before,
   &__field-title--in-two-line::after {
     content: "";
-    width: 280px;
     height: 1px;
     background-color: #dbdbdb;
     position: absolute;
@@ -188,38 +201,27 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__field-call,
   &__field-email {
-    width: 315px;
     padding: 19px 73px 19px 21px;
-    margin-left: 12px;
-    margin-top: 74px;
     font-weight: bold;
     font-size: 18px;
     background-color: #f2f2f2;
     border: none;
   }
 
-  &__field-email {
-    width: 316px;
-    margin-left: 14px;
+  &__field-call::placeholder,
+  &__field-email::placeholder {
+    color: #000000;
   }
 
   &__label-checkbox {
     width: 205px;
-    margin-top: 42px;
-    margin-right: 54px;
     display: flex;
-  }
-
-  &__label-checkbox:nth-child(3) {
-    margin-right: 32px;
-  }
-
-  &__label-checkbox:nth-child(4) {
-    margin-right: 0;
+    margin-bottom: 33px;
   }
 
   &__checkbox-label {
@@ -243,38 +245,36 @@
     position: absolute;
   }
 
-  &__checkbox-label::after {
+  &__checkbox-tick {
     display: none;
-    content: url(../img/icon-tick.svg);
-    width: 24px;
-    height: 16px;
     left: 17px;
     top: 20px;
     position: absolute;
   }
 
-  &__field-checkbox:checked+&__checkbox-label::after {
+  &__field-checkbox:checked + &__checkbox-label &__checkbox-tick {
     display: block;
   }
 
-  &__field-checkbox:focus+&__checkbox-label::before {
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
+  &__field-checkbox:hover+&__checkbox-label::before {
+    background-color: #e5e5e5;
   }
 
-  &__fieldset--landmark {
-    margin-bottom: 67px;
+  &__field-checkbox:active+&__checkbox-label::before {
+    background-color: #d5d5d5;
   }
 
-  &__field-title--emotion {
-    padding: 0 353px;
+  &__field-checkbox:active+&__checkbox-label &__checkbox-tick {
+    opacity: 0.3;
+  }
+
+  &__field-checkbox:focus + &__checkbox-label::before {
+    outline: 1px auto #e5e5e5;
   }
 
   &__fieldset-textarea {
-    margin-top: 57px;
-    width: 960px;
     height: 160px;
-    padding: 19px 25px 19px 21px;
+    padding: 19px 25px 19px 22px;
     font-size: 18px;
     font-weight: bold;
     text-transform: none;
@@ -290,18 +290,30 @@
   &__button-container {
     width: 100%;
     display: flex;
-    margin-top: 52px;
+    margin-top: 53px;
   }
 
   &__button {
     margin-right: auto;
-    padding: 16px 150px 18px 148px;
     font-size: 21px;
     text-transform: uppercase;
     font-weight: bold;
     color: #ffffff;
     border: none;
     background-color: #81b3d2;
+  }
+
+  &__button:hover {
+    background-color: #669ec0;
+  }
+
+  &__button:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &__button:disabled {
+    background-color: #e5e5e5;
   }
 
   &__must-field {

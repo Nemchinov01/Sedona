@@ -1,0 +1,87 @@
+.failure-popup {
+  display: none;
+  position: fixed;
+  top: 275px;
+  padding: 63px 64px 49px 64px;
+  box-shadow: 0 0 15px 7px rgba(0, 1, 1, 0.15);
+
+
+  &__title {
+    margin: 0;
+    width: 220px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  &__failure-description {
+    margin-bottom: 32px;
+    width: 275px;
+    text-align: left;
+  }
+
+  &__button {
+    padding: 21px 123px 22px 122px;
+    font-size: 21px;
+    color: #ffffff;
+    background-color: #81b3d2;
+    border: none;
+  }
+
+  &__button:hover {
+    background-color: #669ec0;
+  }
+
+  &__button:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.success-popup-wrapper {
+  display: none;
+  position: fixed;
+  box-shadow: 0 0 15px 7px rgba(0, 1, 1, 0.15);
+  top: 85px;
+  z-index: 1;
+}
+
+.success-popup {
+  width: 640px;
+  padding: 65px 115px 41px 111px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  &__failure-description {
+    margin: 0;
+    line-height: 24px;
+  }
+
+  &__button-conainer {
+    padding: 44px 91px;
+    background-color: #f2f2f2;
+  }
+
+  &__button {
+    padding: 16px 154px 18px 155px;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    background-color: #81b3d2;
+  }
+
+  &__button:hover {
+    background-color: #669ec0;
+  }
+
+  &__button:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
